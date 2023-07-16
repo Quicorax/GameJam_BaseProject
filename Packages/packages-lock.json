@@ -264,21 +264,14 @@
       },
       "url": "https://packages.unity.com"
     },
-    "es.quicorax.audioutil": {
-      "version": "https://github.com/Quicorax/audioUtil-pkg.git",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "2cc866e6fc4bdaf0c944dcda88e30202c0708788"
-    },
-    "es.quicorax.localizationutil": {
-      "version": "https://github.com/Quicorax/localizationUtil-pkg.git",
+    "es.quicorax.jamutils": {
+      "version": "https://github.com/Quicorax/jamUtils-pkg.git",
       "depth": 0,
       "source": "git",
       "dependencies": {
         "com.unity.textmeshpro": "1.0.0"
       },
-      "hash": "e9ba25d24f98ae550a8053d7cd9fba49410e72d5"
+      "hash": "88b26a5f72f94b4244100b25df9e19ec7de83478"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",
