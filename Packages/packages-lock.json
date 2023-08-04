@@ -176,6 +176,15 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.unity.postprocessing": {
+      "version": "3.2.2",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.physics": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.render-pipelines.core": {
       "version": "12.1.12",
       "depth": 1,
@@ -271,7 +280,7 @@
       "dependencies": {
         "com.unity.textmeshpro": "1.0.0"
       },
-      "hash": "88b26a5f72f94b4244100b25df9e19ec7de83478"
+      "hash": "5bc4ea72aae4ecaa2bbf7c4c905090f2b4b6ea23"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",
