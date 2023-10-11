@@ -145,7 +145,7 @@
       }
     },
     "com.unity.ide.rider": {
-      "version": "3.0.24",
+      "version": "3.0.26",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -273,14 +273,12 @@
       },
       "url": "https://packages.unity.com"
     },
-    "es.quicorax.jamutils": {
-      "version": "https://github.com/Quicorax/jamUtils-pkg.git",
+    "es.quicorax.audioutil": {
+      "version": "https://github.com/Quicorax/audioUtil-pkg.git",
       "depth": 0,
       "source": "git",
-      "dependencies": {
-        "com.unity.textmeshpro": "1.0.0"
-      },
-      "hash": "692511145dc79e66fa8c88fb3f437670e2579bbe"
+      "dependencies": {},
+      "hash": "0c502b9cf60b093394ec1c1f2ca6a11a613db6b9"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",

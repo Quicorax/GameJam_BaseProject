@@ -1,5 +1,7 @@
+using Services.Runtime.AudioService;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace UI.Canvas
 {
@@ -12,6 +14,14 @@ namespace UI.Canvas
         [SerializeField] private BaseView _settingsPopUp;
         [SerializeField] private BaseView _creditsPopUp;
 
+        private IAudioService _audioService;
+        
+        [Inject]
+        public void Construct(IAudioService audioService)
+        {
+            _audioService = audioService;
+        }
+        
         protected override void Awake()
         {
             _playButton.onClick.AddListener(HandlePlay);
@@ -30,6 +40,7 @@ namespace UI.Canvas
 
         private void HandlePlay()
         {
+            _audioService.PlaySFX("SFX");
             NavigateToScene();
         }
 

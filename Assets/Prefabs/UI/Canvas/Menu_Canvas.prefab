@@ -501,8 +501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 597f41bb82404c7b951bf31e333b6057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _debugSceneNavigationButton: {fileID: 8494636088300244564}
-  _sceneNavigationTargetScene: 02_Game
+  _sceneNavigationTargetScene: 01_Game
   _canvasLayers:
   - Layer: 0
     Parent: {fileID: 5377089099084841413}
@@ -518,14 +517,3 @@ MonoBehaviour:
   _creditsButton: {fileID: 634546137101639394}
   _settingsPopUp: {fileID: 2687244506830864408, guid: 2bc287df7171042998a6115e5a21daaf, type: 3}
   _creditsPopUp: {fileID: 110237251185576980, guid: 2540c90e5ed6241d49de65e0c3c06141, type: 3}
---- !u!114 &8494636088300244564 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1668600190521231645, guid: c530d5667cf53f446aea46299b4ec323, type: 3}
-  m_PrefabInstance: {fileID: 7118798532402956105}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
