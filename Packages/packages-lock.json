@@ -280,6 +280,15 @@
       "dependencies": {},
       "hash": "0c502b9cf60b093394ec1c1f2ca6a11a613db6b9"
     },
+    "es.quicorax.localizationutil": {
+      "version": "https://github.com/Quicorax/localizationUtil-pkg.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.textmeshpro": "1.0.0"
+      },
+      "hash": "3f10983dcc46ceb1f8ac5ea8388c8e16420856c6"
+    },
     "com.unity.modules.ai": {
       "version": "1.0.0",
       "depth": 0,
