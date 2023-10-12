@@ -1,5 +1,6 @@
 using Services.Runtime.AudioService;
 using Services.Runtime.Localization;
+using Services.Runtime.RemoteVariables;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
@@ -14,16 +15,6 @@ namespace UI.Canvas
 
         [SerializeField] private BaseView _settingsPopUp;
         [SerializeField] private BaseView _creditsPopUp;
-
-        private IAudioService _audioService;
-        private ILocalizationService _localizationService;
-        
-        [Inject]
-        public void Construct(IAudioService audioService, ILocalizationService localizationService)
-        {
-            _audioService = audioService;
-            _localizationService = localizationService;
-        }
         
         protected override void Awake()
         {
@@ -43,8 +34,6 @@ namespace UI.Canvas
 
         private void HandlePlay()
         {
-            _audioService.PlaySFX("SFX");
-            Debug.Log(_localizationService.Localize("CAT"));
             NavigateToScene();
         }
 

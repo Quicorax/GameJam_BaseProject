@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "VariableKey": "GAME_PLAYER_VERTICAL_VELOCITY",
+      "Type": "float",
+      "Value": "0.100000"
+    },
+    {
+      "VariableKey": "GAME_PLAYER_LATERAL_VELOCITY",
+      "Type": "float",
+      "Value": "0.300000"
+    },
+    {
+      "VariableKey": "GAME_PLAYER_ADDITIVE_VELOCITY",
+      "Type": "float",
+      "Value": "0.050000"
+    },
+    {
+      "VariableKey": "GAME_PLAYER_RESET_VELOCITY_TIME",
+      "Type": "float",
+      "Value": "1.500000"
+    }
+  ]
+}

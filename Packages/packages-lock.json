@@ -289,6 +289,13 @@
       },
       "hash": "3f10983dcc46ceb1f8ac5ea8388c8e16420856c6"
     },
+    "es.quicorax.remotevariablesutil": {
+      "version": "https://github.com/Quicorax/remoteVariablesUtil-pkg.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "2459053b7453884274716c6067abf9fe9590cea9"
+    },
     "com.unity.modules.ai": {
       "version": "1.0.0",
       "depth": 0,
