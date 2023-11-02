@@ -7,7 +7,7 @@ namespace UI.Canvas
     {
         [SerializeField] private Button _settingsButton;
         
-        [SerializeField] private BaseView _settingsPopUp;
+        [SerializeField] private GameObject _settingsPopUp;
         
         protected override void Awake()
         {
@@ -24,8 +24,8 @@ namespace UI.Canvas
 
         private void HandleSettings()
         {
-           var view = CreateView(_settingsPopUp, CanvasLayer.PopUps) as GameSettingsPopUp;
-           view.InjectDependencies(NavigateToScene);
+           CreateView<GameSettingsPopUp>(_settingsPopUp, CanvasLayer.PopUps)
+               .InjectDependencies(NavigateToScene);
         }
     }
 }

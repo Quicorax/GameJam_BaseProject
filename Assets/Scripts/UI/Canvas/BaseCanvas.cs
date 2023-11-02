@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+using Zenject;
 
 namespace UI.Canvas
 {
@@ -13,7 +13,15 @@ namespace UI.Canvas
         [SerializeField] private SceneTransitionViewBlocker _sceneTransition;
 
         private readonly Dictionary<CanvasLayer, Transform> _canvasLayersByType = new();
+        
+        private IInstancer _instancer;
 
+        [Inject]
+        public void Construct(IInstancer instancer)
+        {
+            _instancer = instancer;
+        }
+        
         protected virtual void Awake()
         {
             foreach (var container in _canvasLayers)
@@ -26,12 +34,12 @@ namespace UI.Canvas
         {
         }
 
-        protected BaseView CreateView(BaseView prefab, CanvasLayer layer)
+        protected T CreateView<T>(GameObject prefab, CanvasLayer layer) where T : BaseView
         {
-            var view = Instantiate(prefab, GetLayer(layer)).Initialize();
+            var view = _instancer.Create<T>(prefab, GetLayer(layer)).Initialize();
             view.Open();
             
-            return view;
+            return view as T;
         }
 
         protected void NavigateToScene()

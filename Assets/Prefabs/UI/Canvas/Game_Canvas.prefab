@@ -256,7 +256,7 @@ MonoBehaviour:
     Parent: {fileID: 406815905164040500}
   _sceneTransition: {fileID: 5744416028838302896}
   _settingsButton: {fileID: 7046704931829825116}
-  _settingsPopUp: {fileID: 7318270068683150791, guid: 93a070460c5b74c059634a4fe36c1f4b, type: 3}
+  _settingsPopUp: {fileID: 2990307612326122569, guid: 93a070460c5b74c059634a4fe36c1f4b, type: 3}
 --- !u!114 &5744416028838302896 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3825308398322965775, guid: c530d5667cf53f446aea46299b4ec323, type: 3}

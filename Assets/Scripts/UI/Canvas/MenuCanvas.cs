@@ -1,9 +1,5 @@
-using Services.Runtime.AudioService;
-using Services.Runtime.Localization;
-using Services.Runtime.RemoteVariables;
 using UnityEngine;
 using UnityEngine.UI;
-using Zenject;
 
 namespace UI.Canvas
 {
@@ -13,8 +9,8 @@ namespace UI.Canvas
         [SerializeField] private Button _settingsButton;
         [SerializeField] private Button _creditsButton;
 
-        [SerializeField] private BaseView _settingsPopUp;
-        [SerializeField] private BaseView _creditsPopUp;
+        [SerializeField] private GameObject _settingsPopUp;
+        [SerializeField] private GameObject _creditsPopUp;
         
         protected override void Awake()
         {
@@ -39,12 +35,12 @@ namespace UI.Canvas
 
         private void HandleSettings()
         {
-            CreateView(_settingsPopUp, CanvasLayer.PopUps);
+            CreateView<SettingsPopUp>(_settingsPopUp, CanvasLayer.PopUps);
         }
 
         private void HandleCredits()
         {
-            CreateView(_creditsPopUp, CanvasLayer.PopUps);
+            CreateView<CreditsPopUp>(_creditsPopUp, CanvasLayer.PopUps);
         }
     }
 }
