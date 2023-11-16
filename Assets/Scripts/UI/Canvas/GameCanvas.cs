@@ -21,11 +21,10 @@ namespace UI.Canvas
             base.OnDestroy();
         }
 
-
         private void HandleSettings()
         {
            CreateView<GameSettingsPopUp>(_settingsPopUp, CanvasLayer.PopUps)
-               .InjectDependencies(NavigateToScene);
+               .AddOnExitAction(NavigateToScene);
         }
     }
 }

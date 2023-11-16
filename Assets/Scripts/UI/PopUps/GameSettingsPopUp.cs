@@ -7,7 +7,7 @@ public sealed class GameSettingsPopUp : SettingsPopUp
     [SerializeField] private Button _exitButton;
     private Action _onExit;
 
-    public void InjectDependencies(Action onExit)
+    public void AddOnExitAction(Action onExit)
     {
         _onExit = onExit;
     }
