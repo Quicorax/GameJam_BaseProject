@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Audios:
   - AudioKey: Music
-    AudioFile: {fileID: 8300000, guid: 2bdab09f86ab43440aec43314d6e3411, type: 3}
+    AudioFile: {fileID: 8300000, guid: 3b45165893802734c9a992c4c1b74b45, type: 3}
   - AudioKey: SFX
-    AudioFile: {fileID: 8300000, guid: a8025de0760ed624e87b94f6d12ba27b, type: 3}
+    AudioFile: {fileID: 8300000, guid: 8270c9b1455fb8b4ab290266822ad3d3, type: 3}
