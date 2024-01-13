@@ -1,0 +1,39 @@
+name: Build Project and Publish to itch.io
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    name: Build Project and Publish to itch.io ✨
+    runs-on: ubuntu-latest
+    # This stops builds that are in-progress once a new commit comes in
+    concurrency: 
+      group: unity-build
+      cancel-in-progress: true
+    steps:
+      # Checkout
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          lfs: true
+      # Cache
+      - uses: actions/cache@v2
+        with:
+          path: Library
+          key: Library
+      # Build
+      - name: Build project
+        uses: game-ci/unity-builder@v2
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+        with:
+          targetPlatform: WebGL
+      # Upload to Itch
+      - uses: josephbmanley/butler-publish-itchio-action@master
+        env:
+          BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
+          CHANNEL: html5
+          ITCH_GAME: ${{ vars.ITCH_GAME }}
+          ITCH_USER: ${{ vars.ITCH_USER }}
+          PACKAGE: build/WebGL
