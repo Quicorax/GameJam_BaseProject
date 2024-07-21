@@ -272,7 +272,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "abe1c994c4861c82f55a70e43bef67df9681d73f"
+      "hash": "4cbe053035ae9a218696f7b4075b3027b197c880"
     },
     "es.quicorax.localizationutil": {
       "version": "https://github.com/Quicorax/localizationUtil-pkg.git",
@@ -281,14 +281,14 @@
       "dependencies": {
         "com.unity.textmeshpro": "1.0.0"
       },
-      "hash": "7da5c6bc11dc860aca4aca7c39af99023aeb488a"
+      "hash": "8e2f2cbc6b3994d16e39f53ae5bb60b5115579c5"
     },
     "es.quicorax.remotevariablesutil": {
       "version": "https://github.com/Quicorax/remoteVariablesUtil-pkg.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "986ae270a82f9d4f38d460ca5a193b9d610535f3"
+      "hash": "318c6ed255818853dea9f5fd66f816aa44c8c43b"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",
