@@ -23,9 +23,11 @@ jobs:
           path: Library
           key: Library
       # Build
-      - name: Build project
-        uses: game-ci/unity-builder@v2
+      - name: Unity - Builder
+        uses: game-ci/unity-builder@v4.2.3
         env:
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
           targetPlatform: WebGL
