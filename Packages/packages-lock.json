@@ -272,7 +272,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "2c53d838de3abb755e7e0a8aa70e00e2c0824585"
+      "hash": "13b557761338f301e31b4a364ea45bac06e37693"
     },
     "es.quicorax.localizationutil": {
       "version": "https://github.com/Quicorax/localizationUtil-pkg.git",
