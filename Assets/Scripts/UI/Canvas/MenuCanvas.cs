@@ -38,11 +38,18 @@ namespace UI.Canvas
             base.OnDestroy();
         }
 
+        private void Start()
+        {
+            _audioService.PlayMusicWithIntro("SFX", "Music");
+        }
+
         private void HandlePlay()
         {
-            _audioService.PlaySFX("SFX");
-
-            NavigateToScene();
+            _audioService.StopMusicWithIntro("SFX", "Music", 0.5f, () =>
+            {
+                _audioService.PlaySFX("SFX");
+                NavigateToScene();
+            });
         }
 
         private void HandleSettings()
