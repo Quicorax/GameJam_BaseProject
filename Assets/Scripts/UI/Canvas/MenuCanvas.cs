@@ -45,6 +45,8 @@ namespace UI.Canvas
 
         private void HandlePlay()
         {
+            _playButton.interactable = false;
+            
             _audioService.StopMusicWithIntro("SFX", "Music", 0.5f, () =>
             {
                 _audioService.PlaySFX("SFX");

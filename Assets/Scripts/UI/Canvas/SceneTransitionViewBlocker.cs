@@ -7,18 +7,21 @@ namespace UI.Canvas
     public class SceneTransitionViewBlocker : MonoBehaviour
     {
         [SerializeField] private CanvasGroup _interactionBlocker;
-        [SerializeField] private Transform _viewBlocker;
+        [SerializeField] private bool _startWithTransitionOff;
 
         private void Start()
         {
-            TransitionOff();
+            if (_startWithTransitionOff)
+            {
+                TransitionOff();
+            }
         }
 
         private void TransitionOff(Action onComplete = null)
         {
             _interactionBlocker.blocksRaycasts = true;
-        
-            _viewBlocker.DOMoveY(Screen.height, 1).SetEase(Ease.OutBounce)
+
+            _interactionBlocker.DOFade(0, 0.5f).SetEase(Ease.InQuad)
                 .OnComplete(() =>
                 {
                     _interactionBlocker.blocksRaycasts = false;
@@ -30,11 +33,8 @@ namespace UI.Canvas
         {
             _interactionBlocker.blocksRaycasts = true;
 
-            _viewBlocker.DOMoveY(0, 1).SetEase(Ease.OutBounce)
-                .OnComplete(() =>
-                {
-                    onComplete?.Invoke();
-                });
+            _interactionBlocker.DOFade(1, 0.5f).SetEase(Ease.OutQuad)
+                .OnComplete(() => { onComplete?.Invoke(); });
         }
     }
 }

@@ -24,6 +24,8 @@ public sealed class GameSettingsPopUp : SettingsPopUp
 
     private void HandleExit()
     {
+        _exitButton.interactable = false;
+        
         Close(()=> _onExit.Invoke());
     }
 }
